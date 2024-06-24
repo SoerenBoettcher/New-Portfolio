@@ -13,6 +13,12 @@ const Skills = () => {
       count: 75,
     },
     {
+      name: "SASS",
+      logo: "logo-sass",
+      level: "Beginner",
+      count: 35,
+    },
+    {
       name: "JAVASCRIPT",
       logo: "logo-javascript",
       level: "Beginner",
@@ -23,6 +29,12 @@ const Skills = () => {
       logo: "logo-react",
       level: "Beginner",
       count: 50,
+    },
+    {
+      name: "NPM",
+      logo: "logo-npm",
+      level: "Beginner",
+      count: 35,
     },
     {
       name: "FIREBASE",
