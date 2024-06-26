@@ -25,7 +25,7 @@ const Project = () => {
       //live_link: "https://notizbuch.onrender.com/",
     },
     {
-      img: projectWeb,
+      img: projectPortfolio,
       name: "First Portfolio with HTML and CSS",
       github_link: "https://github.com/SoerenBoettcher/Portfolio",
       live_link: "https://soerenboettcher.github.io/Portfolio/",
@@ -52,8 +52,8 @@ const Project = () => {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
+              delay: 7000,
+              disableOnInteraction: true,
             }}
             pagination={{
               clickable: true,
