@@ -20,9 +20,9 @@ const Project = () => {
       live_link: "https://notizbuch.onrender.com/",
     },
     {
-      img: projectWeb,
-      name: "First Website with HTML and CSS",
-      github_link: "https://github.com/SoerenBoettcher/web",
+      img: projectGaming,
+      name: "First Groupwork (Gaming-Page)",
+      github_link: "https://github.com/h1-Hello-World-h1/Gaming-Room-",
       //live_link: "",
     },
     {
@@ -32,9 +32,9 @@ const Project = () => {
       live_link: "https://soerenboettcher.github.io/Portfolio/",
     },
     {
-      img: projectGaming,
-      name: "First Groupwork (Gaming-Page)",
-      github_link: "https://github.com/h1-Hello-World-h1/Gaming-Room-",
+      img: projectWeb,
+      name: "First Website with HTML and CSS",
+      github_link: "https://github.com/SoerenBoettcher/web",
       //live_link: "",
     },
   ];
