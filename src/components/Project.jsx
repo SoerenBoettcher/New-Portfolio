@@ -70,6 +70,7 @@ const Project = () => {
             modules={[Autoplay, Pagination, Navigation]}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
+            className="mySwiper"
           >
             {projects.map((project_info, i) => (
               <SwiperSlide key={i}>
