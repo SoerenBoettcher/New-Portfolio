@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import projectNotiz from "../assets/project-notiz-app.png";
 import projectWeb from "../assets/project-website-mit-html-css.png";
 import projectPortfolio from "../assets/project-first-portfolio-html-css.png";
+import projectGaming from "../assets/project-gruppen-gaming-page.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -15,20 +16,26 @@ const Project = () => {
     {
       img: projectNotiz,
       name: "Never forget a note",
-      // github_link: "https://github.com/SoerenBoettcher/Notizbuch",
+      github_link: "https://github.com/SoerenBoettcher/Notizbuch",
       live_link: "https://notizbuch.onrender.com/",
     },
     {
       img: projectWeb,
       name: "First Website with HTML and CSS",
       github_link: "https://github.com/SoerenBoettcher/web",
-      //live_link: "https://notizbuch.onrender.com/",
+      //live_link: "",
     },
     {
       img: projectPortfolio,
       name: "First Portfolio with HTML and CSS",
       github_link: "https://github.com/SoerenBoettcher/Portfolio",
       live_link: "https://soerenboettcher.github.io/Portfolio/",
+    },
+    {
+      img: projectGaming,
+      name: "First Groupwork (Gaming-Page)",
+      github_link: "https://github.com/h1-Hello-World-h1/Gaming-Room-",
+      //live_link: "",
     },
   ];
   const progressCircle = useRef(null);
@@ -52,7 +59,7 @@ const Project = () => {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-              delay: 7000,
+              delay: 10000,
               disableOnInteraction: true,
             }}
             pagination={{
@@ -71,14 +78,14 @@ const Project = () => {
                     <a
                       href={project_info.github_link}
                       target="_blank"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block rounded-lg"
+                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block rounded-lg hover:text-gray-100"
                     >
                       Github
                     </a>
                     <a
                       href={project_info.live_link}
                       target="_blank"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block rounded-lg"
+                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block rounded-lg hover:text-gray-100"
                     >
                       Live
                     </a>
