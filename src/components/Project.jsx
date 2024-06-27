@@ -40,6 +40,7 @@ const Project = () => {
   ];
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
+  const swiperRef = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
     progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
@@ -60,7 +61,7 @@ const Project = () => {
             centeredSlides={true}
             autoplay={{
               delay: 10000,
-              disableOnInteraction: true,
+              disableOnInteraction: false,
             }}
             pagination={{
               clickable: true,
@@ -68,10 +69,15 @@ const Project = () => {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {projects.map((project_info, i) => (
               <SwiperSlide key={i}>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
+                <div
+                  className="h-fit w-full p-4 bg-slate-700 rounded-xl"
+                  onMouseEnter={() => swiperRef.current.autoplay.stop()}
+                  onMouseLeave={() => swiperRef.current.autoplay.start()}
+                >
                   <img src={project_info.img} alt="" className="rounded-lg" />
                   <h3 className="text-xl my-4">{project_info.name}</h3>
                   <div className="flex gap-3">
@@ -82,13 +88,15 @@ const Project = () => {
                     >
                       Github
                     </a>
-                    <a
-                      href={project_info.live_link}
-                      target="_blank"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block rounded-lg hover:text-gray-100"
-                    >
-                      Live
-                    </a>
+                    {project_info.live_link && (
+                      <a
+                        href={project_info.live_link}
+                        target="_blank"
+                        className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block rounded-lg hover:text-gray-100"
+                      >
+                        Live
+                      </a>
+                    )}
                     <div className="autoplay-progress" slot="container-end">
                       <svg viewBox="0 0 48 48" ref={progressCircle}>
                         <circle cx="24" cy="24" r="20"></circle>
